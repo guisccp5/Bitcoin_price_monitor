@@ -1,0 +1,57 @@
+1 - Primeiramente deve-se digitar '.git init'
+
+Isso criará alguns arquivos próprios do git, entre eles o mais importante é o gitignore, pois nele está tudo o que se deve ignorar ao realizar o commit. É aqui onde vamos colocar diretórios e arquivos grandes, que podemos gerar facilmente, ou arquivos que não queremos que fiquem visíveis no repositório.
+
+/----------------------------
+
+2 - Após, deve ser executado o comando 'heroku git:remote -a (nome do app heroku)' para acessar o meu repositório ou 'heroku create' para criar um novo.
+
+/----------------------------
+
+3 - Nesta etapa deve ser criado o arquivo Procfile para mostrar para o HEROKU o tipo de projeto que vamos instalar, através do comando: '. > Procfile'
+
+No arquivo procfile, deve ser inserido o comando: clock: python bitcoin_monitor.py
+Este é o comando que fará o bot realizar o deploy no heroku
+
+/----------------------------
+
+4 - Neste momento deve ser instalado as dependência que o python irá utilizar no processo: pip install requests twilio apscheduler
+
+/----------------------------
+
+5 - Agora, devemos criar o arquivo que irá armazenar os requerimentos para o projeto funcionar: pip freeze > requirements.txt
+
+/----------------------------
+
+
+6 - Para tornar a aplicação mais segura e evitar de fornecer dados, deve ser declarada variáveis de ambiente para que os dados não fiquem expostos
+
+heroku config:set AUTH_TOKEN='auth_token' (sem as aspas)
+heroku config:set ACCOUNT_SID='account_sid'
+heroku config:set TELEPHONE_NUMBER='to_number'
+
+As variáveis devem ser definidas também em: Edit Configurations > Environment variables
+
+após definida as variáveis de ambiente, deve ser importada a biblioteca 'import os' e utilizar os seguintes comandos para recuperar as variáveis:
+
+account_sid = os.environ['ACCOUNT_SID']
+auth_token = os.environ['AUTH_TOKEN']
+to_number = os.environ['TELEPHONE_NUMBER']
+
+
+/----------------------------
+
+7 - Agora deve ser criado o arquivo .gitignore que irá ignorar arquivos/pastas que estão no projeto e que desejamos que não sejam enviados, arquivo estes que podemos ver digitando 'git status':
+
+/----------------------------
+
+8 - Agora é a parte do commit e envio para o heroku.
+* Primeiro precisamos adicionar todos os arquivos, digitando: git add .
+* Após, iremos realizar o commit: git commit -m "nome do commit"
+* Agora iremos enviar para o heroku: git push heroku master
+
+/----------------------------
+
+9 - Agora é só executar:
+heroku ps:scale clock=1 (on)
+heroku ps:scale clock=1 (off)
