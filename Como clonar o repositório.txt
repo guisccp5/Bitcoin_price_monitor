@@ -1,0 +1,9 @@
+1 - No menu do Pycharm,  clicamos em "Get from VCS" e inserimos o link do repositório;
+
+2 - Após importar, podemos verificar o status dos git digitando: git status;
+
+3 - Feito isso, definimos as variáveis de ambiente no Pycharm nas configurações;
+
+4 - Em seguida podemos executar o bot digitando: 
+heroku ps:scale clock=1 (on)
+heroku ps:scale clock=0 (off) 
