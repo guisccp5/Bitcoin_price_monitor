@@ -12,15 +12,14 @@ A aplicação consiste em realizar uma requisição em uma API de criptomoedas (
 ![Requisição via Wpp](https://github.com/imguisilva/Bitcoin_price_monitor/blob/main/captura-twilio.PNG?raw=true)
 
 # Tecnologias utilizadas
-## Linguagem
+### Linguagem
 - Python
-## Implantação em produção
+### Implantação em produção
 - API Whatsapp: Twilio
 - API Criptomoedas: Mercado Bitcoin
 
 # Como executar o projeto
 
-## Back end
 Pré-requisitos: Python 3.9 ou superior
 
 ```bash
