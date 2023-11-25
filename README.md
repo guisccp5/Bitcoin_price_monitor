@@ -9,7 +9,7 @@ Bitcoin and Ethereum Price Monitor é um chatbot desenvolvido em python que envi
 A aplicação consiste em realizar uma requisição em uma API de criptomoedas (mercado bitcoin), onde é coletado último valor do bitcoin e do ethereum, e depois o valor e enviado para um número de whatsapp e atualizado a cada cinco segundos até que a execução do mesmo seja interrompida.
 
 ## Representação
-![Requisição via Wpp](https://github.com/imguisilva/Bitcoin_price_monitor/blob/main/atualizacao-bitcoin.png)
+![Requisição via Wpp](https://github.com/imguisilva/Bitcoin_price_monitor/blob/main/captura-twilio.PNG?raw=true)
 
 # Tecnologias utilizadas
 ## Linguagem
