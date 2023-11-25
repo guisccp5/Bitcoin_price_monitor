@@ -14,9 +14,9 @@ A aplicação consiste em realizar uma requisição em uma API de criptomoedas (
 # Tecnologias utilizadas
 ### Linguagem
 - Python
-### Implantação em produção
-- API Whatsapp: Twilio
-- API Criptomoedas: Mercado Bitcoin
+### API's
+- API Whatsapp: [Twilio](https://www.twilio.com/login)
+- API Criptomoedas: [Mercado Bitcoin](https://api.mercadobitcoin.net/api/v4/docs)
 
 # Como executar o projeto
 
